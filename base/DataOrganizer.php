@@ -1,7 +1,45 @@
 <?php
 
+/**
+ * @author Bastien Sevajol (bastien.sevajol@xsalto.com)
+ * 
+ * Cette classe permet de transformer des données seolan dans une forme plus 
+ * exploitable (voir doc de ->getFormatedData())
+ */
 class DataOrganizer
 {
+  
+  /**
+   * 
+   * @param array $non_formated_data du type:
+   * array(
+   *   'olines_oid'   => array(
+   *     0 => '1',
+   *     0 => '2'
+   *   ),
+   *   'olines_oname'  => array(
+   *     0 => 'Jean',
+   *     0 => 'Paul'
+   *   ),
+   *   'olines_ophone' => array(
+   *     0 => '0676548382',
+   *     0 => '0676548383'
+   *   ),
+   * )
+   * @return array of data transformé en:
+   * array(
+   *   array(
+   *     'oid'    => '1',
+   *     'oname   => 'Jean',
+   *     'ophone' => '0676548382'
+   *   ),
+   *   array(
+   *     'oid'    => '2',
+   *     'oname   => 'Paul',
+   *     'ophone' => '0676548383'
+   *   )
+   * )
+   */
   public function getFormatedData($non_formated_data)
   {
     $formated_data = array();
