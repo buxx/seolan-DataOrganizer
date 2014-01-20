@@ -1,0 +1,13 @@
+www/tzr
+www/templates_c
+www/index.php
+www/admin
+www/admin.php
+www/.bash_history
+logs
+var
+cgi-bin
+*~
+\#*#
+seolan8
+seolan8.1
